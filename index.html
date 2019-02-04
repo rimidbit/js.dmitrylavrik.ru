@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Javascript - интенсивный курс для верстальщиков от Дмитрия Лаврика</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link href="libs/font_awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="css/styles.min.css" rel="stylesheet">
+        <script src="libs/jquery/jquery.min.js"></script>
+        <script src="js/timer.js"></script>
+        <script src="js/script.js@id=32"></script>
+    </head>
+    <body>
+        <!--header section begin-->
+				        <header>
+            <div class="wrapper">
+                <div class="logo">
+                    <h1 class="h1">Javascript</h1>
+                    <div class="h1__sub">Скопированный лендинг для примера Дмитрия Лаврика</div>
+                </div>
+                <div class="phone">
+                    <img src="img/progr.png" alt="phone_picture">
+                </div>
+                <div class="linkButtons">
+                    <a href="#">
+                        <div class="linkButtons__AppStore" data-scroll-target=".featuresSection">
+                            <div class="linkButtons__Img">
+                                <span class="fa fa-fw fa-2x fa-question">&nbsp;</span>
+                            </div>
+                            <div class="linkButtons__Text">
+                                <span class="smalltext">Хочу узнать</span>
+                                <span class="bigtext">подробнее</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="linkButtons__GooglePlay" data-scroll-target=".packagesSection" data-scroll-rate="700">
+                            <div class="linkButtons__Img">
+                                <span class="fa fa-fw fa-2x fa-check">&nbsp;</span>
+                            </div>
+                            <div class="linkButtons__Text">
+                                <span class="smalltext">Сразу хочу</span>
+                                <span class="bigtext">записаться</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!--main section begin-->
+        <main>
+            <section class="featuresSection">
+                <div class="wrapper">
+                    <article class="bigArticle">
+                        <h2>Цель курса</h2>
+                        <div class="bigArticle__text big_text">
+                            <p>Научить верстальщика спокойно и без лишней нервотрёпки решать типичные javascript-овые задачи, необходимые при вёрстке странички.</p>
+                            <p>При этом особое внимание уделяется пониманию процессов. Например, мы не просто изучаем возможности библиотеки jQuery, 
+                                мы сначала делаем на неё пародию, чтобы понять, как вся эта магия работает изнутри, и только потом переходим к самой библиотеке.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="programmSection">
+                <div class="wrapper">
+                    <h2 class="programmSection__title">Программа курса</h2>
+                    <div class="programmItems">
+                        <article class="programmItem">
+                            <i class="fa fa-calendar-o fa-pull-left" aria-hidden="true"></i>
+                            <h4 class="programmItem__title">17 января &mdash; урок 1. Основы языка.</h4>
+                            <ul>
+                                <li>Массивы и объекты</li>
+                                <li>Области видимости переменных</li>
+                                <li>Коллбеки</li>
+                                <li>Нативные селекторы и иерархия</li>
+                                <li>События</li>
+                                <li>События для группы элементов</li>
+                            </ul>
+                        </article>
+                        <article class="programmItem">
+                            <i class="fa fa-calendar-o fa-pull-left" aria-hidden="true"></i>
+                            <h4 class="programmItem__title">21 января &mdash; урок 2. ООП в javascript.</h4>
+                            <ul>
+                                <li>Отмена событий по умолчанию</li>
+                                <li>Основы ООП в ES5</li>
+                                <li>Класс и объект</li>
+                                <li>Свойства и методы</li>
+                                <li>Создание таймера обратного отсчёта</li>
+                                <li>Создание слайдера фотографий</li>
+                            </ul>
+                        </article>
+                        <article class="programmItem">
+                            <i class="fa fa-calendar-o fa-pull-left" aria-hidden="true"></i>
+                            <h4 class="programmItem__title">24 января &mdash; урок 3. Тренировка ООП.</h4>
+                            <ul>
+                                <li>Создание пародии на jQuery</li>
+                                <li>Философия jQuery-стиля</li>
+                                <li>Хранение группы элементов</li>
+                                <li>Функции-обёртки для работы с элементами</li>
+                                <li>Волшебный return this для написания цепочек</li>
+                                <li>Функции с разным количеством параметров</li>
+                            </ul>
+                        </article>
+                        <article class="programmItem">
+                            <i class="fa fa-calendar-o fa-pull-left" aria-hidden="true"></i>
+                            <h4 class="programmItem__title">28 января &mdash; урок 4. Основы jQuery.</h4>
+                            <ul>
+                                <li>Выбор версии и подключение библиотеки</li>
+                                <li>Селекторы и фильтры</li>
+                                <li>Основные функции для работы с элементами</li>
+                                <li>Обработка событий</li>
+                                <li>Простейшие функции анимации</li>
+                                <li>Создание слайдера фотографий</li>
+                            </ul>
+                        </article>
+                        <article class="programmItem">
+                            <i class="fa fa-calendar-o fa-pull-left" aria-hidden="true"></i>
+                            <h4 class="programmItem__title">31 января &mdash; урок 5. Тренировка jQuery.</h4>
+                            <ul>
+                                <li>Последовательные и параллельные анимации</li>
+                                <li>Управление потоком анимаций</li>
+                                <li>Всплытие и отмена событий</li>
+                                <li>Live-события</li>
+                                <li>Создание плавного скроллинга</li>
+                                <li>Заготовка для модального окна</li>
+                            </ul>
+                        </article>
+                        <article class="programmItem">
+                            <i class="fa fa-calendar-o fa-pull-left" aria-hidden="true"></i>
+                            <h4 class="programmItem__title">7 февраля &mdash; урок 6. jQuery PRO.</h4>
+                            <ul>
+                                <li>Полезные плагины</li>
+                                <li>Слайдер Owl Carousel</li>
+                                <li>Слайдер Slick</li>
+                                <li>Javascript в фреймворке bootstrap</li>
+                                <li>Создание собственного плагина</li>
+                                <li>Создание и вызов произвольных событий</li>
+                            </ul>
+                        </article>
+                        <article class="programmItem">
+                            <i class="fa fa-calendar-o fa-pull-left" aria-hidden="true"></i>
+                            <h4 class="programmItem__title">14 февраля &mdash; урок 7. Текущие тренды.</h4>
+                            <ul>
+                                <li>Новые стандарты языка</li>
+                                <li>Объявление переменных</li>
+                                <li>Стрелочные функции и контекст</li>
+                                <li>ООП в ES6</li>
+                                <li>Другие приятные мелочи</li>
+                                <li>Поддержка и использование</li>
+                            </ul>
+                        </article>
+                        <article class="programmItem">
+                            <i class="fa fa-calendar-o fa-pull-left" aria-hidden="true"></i>
+                            <h4 class="programmItem__title">18 февраля &mdash; урок 8. Обобщение и Node.</h4>
+                            <ul>
+                                <li>Слабая поддержка ES6+ браузерами</li>
+                                <li>Node.js, gulp и webpack</li>
+                                <li>Работа с node.js command propmt</li>
+                                <li>Настройка gulp</li>
+                                <li>Преобразования с babel</li>
+                                <li>Удобная сборка проекта</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="whySection">
+                <div class="wrapper">
+                    <div class="whyItems">
+                        <article class="whyItem">
+                            <h2 class="whyItem__title">Преподаватель курса</h2>
+                            <p class="whyItem__text big_text">Дмитрий Лаврик</p>
+                            <div class="whyItem__list">
+                                <div class="listItem">
+                                    <div class="listItem__icon">
+                                        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="listArticle">
+                                        <h4 class="listArticle__title">Профессиональный веб-разработчик</h4>
+                                        <p class="listArticle__text sm_text">
+                                            Опыт работы в сфере разработки сайтов более 7 лет. Ориентируется во всех вопросах создания сайтов, от вёрстки до backend-а.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="listItem">
+                                    <div class="listItem__icon">
+                                        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="listArticle">
+                                        <h4 class="listArticle__title">Опытный преподаватель</h4>
+                                        <p class="listArticle__text sm_text">
+                                            Начиная с 2011 года, под его руководством тысячи учеников прошли путь от новичков до успешных веб-программистов.
+                                            Если вы ещё не знакомы с Дмитрием, рекомендуем заглянуть на его youtube-канал, где вы найдете много полезных видео и сможете узнать стиль преподавания Дмитрия.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <div class="whyItem">
+                            <img src="img/dmitry-lavrik.png" title="Дмитрий Лаврик" alt="Дмитрий Лаврик">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="aboutSection">
+                <div class="wrapper">
+                    <h2>Что вы получите</h2>
+                    <div class="aboutItems">
+                        <article class="articleItem">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                            <h4 class="articleItem__title">8 онлайн уроков</h4>
+                            <p class="articleItem__text sm_text">
+                                По понедельникам и четвергам в 20:00 МСК. 
+                                Продолжительность каждого занятия около двух часов. На уроках разбираются домашние работы учеников и новый материал.
+                            </p>
+                        </article>
+                        <article class="articleItem">
+                            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                            <h4 class="articleItem__title">Видеозаписи всех уроков</h4>
+                            <p class="articleItem__text sm_text">Если вы по какой-то причине не смогли посетить урок, не переживайте, он всегда доступен 
+                                в записи в хорошем качестве. Вы сможете посмотреть его в любое время, хоть через год :)</p>
+                        </article>
+                        <article class="articleItem">
+                            <i class="fa fa-file-archive-o" aria-hidden="true"></i>
+                            <h4 class="articleItem__title">Материалы и исходники</h4>
+                            <p class="articleItem__text sm_text">Все примеры, которые мы рассматриваем на уроках, вы получаете в архиве. 
+                                Таким образом, даже не написав ни строчки кода, вы получаете набор готовых решений, сделанных на уроке.</p>
+                        </article>
+                        <article class="articleItem">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <h4 class="articleItem__title">Домашние задания</h4>
+                            <p class="articleItem__text sm_text">После каждого урока выдаётся домашнее задание, которое нужно сделать для закрепления пройденного материала. Плохие оценки не ставим &ndash; только конструктивные комментарии :)</p>
+                        </article>
+                        <article class="articleItem">
+                            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                            <h4 class="articleItem__title">Обратную связь от преподавателя</h4>
+                            <p class="articleItem__text sm_text">Домашнее задание каждого ученика разбирается на уроке. Поэтому максимальный размер группы ограничен, чтобы каждый мог получить комментарии по своей работе.</p>
+                        </article>
+                        <article class="articleItem">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                            <h4 class="articleItem__title">Доступ в закрытую группу</h4>
+                            <p class="articleItem__text sm_text">Во время прохождения курса все участники тусуются в рамках закрытой площадки, где помогают друг другу, а также задают вопросы преподавателю и получают ответы на них.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="videoSection">
+                <div class="wrapper">
+                    <div class="videoItems">
+                        <div class="videoItem videoItem__videoFrame">
+                            <div class="video">
+                                <div class="size"></div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/gYS8kgS8GIk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+                            </div>
+                        </div>
+                        <article class="videoItem videoItem__article">
+                            <h2 class="videoItem__title">Необходимый уровень знаний для курса</h2>
+                            <p class="videoItem__text sm_text">Внимание! Для прохождения данного курса необходимо владение основами программирования! 
+                                Если вас пугают такие темы, как переменные, ветвления, функции, циклы и массивы, то курс не для вас.</p>
+                            <p class="videoItem__text sm_text">Если знания основ есть, то</p>
+                            <h4 class="videoItem__subtitle">изучите вебинар, расположенный рядом</h4>
+                            <p class="videoItem__text sm_text">Если в нём понятны основные моменты &mdash; добро пожаловать на курс!</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="packagesSection">
+                <div class="wrapper">
+					                    <h2 class="packagesSection__title">Запись на курс</h2>
+					<div class="row">
+                        <div class="l">
+                            <p>Максимальная скидка на раннюю запись!</p>
+                            <p class="prices">
+								<s data-sale="-40%">11 500 руб.</s>
+								<span data-text="">6 900 руб.</span>
+							</p>
+							                        </div>
+                        <div class="c">
+                            <span class="fa fa-3x fa-long-arrow-right">&nbsp;</span>
+                        </div>
+                        <div class="r">
+                            <form>
+                                <input type="hidden" name="utm" value="/">    
+                                <input type="hidden" name="month" value="1"> 
+                                <label class="bord name">
+                                    <input name="name" placeholder="Имя (кириллицей)">
+                                </label>
+                                <label class="bord mail">
+                                    <input name="email" placeholder="Email">
+                                </label>
+                                <label class="bord phone">
+                                    <input name="phone" placeholder="Телефон">
+                                </label>
+                                <label class="agree" for="agree">
+                                    <input type="checkbox" id="agree" name="agree" checked>
+                                    <span class="checkbox">&nbsp;</span>
+                                    <span class="txt">
+                                        Я согласен с <a href="../https@dmitrylavrik.ru/oferta.pdf" title="Открыть договор оферты" target="_blank">договором оферты</a>
+                                    </span>
+                                </label>
+                                <label>
+                                    <input type="button" class="btn" value="Оставить заявку">
+                                </label>
+                            </form>
+                        </div>
+                        <div class="payment">
+                            <img src="img/pay.png" title="Способы оплаты" alt="Способы оплаты">
+                        </div>
+						                    </div>
+                </div>
+            </section>
+            <section class="questionsSection">
+                <div class="wrapper">
+                    <h2 class="questionsSection__title">Часто задаваемые вопросы</h2>
+                    <div class="questionItems">
+                        <article class="questionItem">
+                            <i class="fa fa-question-circle fa-pull-left" aria-hidden="true"></i>
+                            <h4 class="questionItem__title">Будут ли записи уроков</h4>
+                            <p class="questionItem__text sm_text">Да, конечно. Видеозапись и материалы выкладываются в течение нескольких часов после окончания урока.</p>
+                        </article>
+                        <article class="questionItem">
+                            <i class="fa fa-question-circle fa-pull-left" aria-hidden="true"></i>
+                            <h4 class="questionItem__title">Какой начальный уровень знаний необходим</h4>
+                            <p class="questionItem__text sm_text">Владение основами программирования. Также советую посмотреть вебинар, расположенный чуть выше.</p>
+                        </article>
+                        <article class="questionItem">
+                            <i class="fa fa-question-circle fa-pull-left" aria-hidden="true"></i>
+                            <h4 class="questionItem__title">Нужно ли делать ДЗ</h4>
+                            <p class="questionItem__text sm_text">Дело добровольное - двойки не ставим :) Но, как показывает практика, без выполнения домашних заданий материал не усвоится.</p>
+                        </article>
+                        <article class="questionItem">
+                            <i class="fa fa-question-circle fa-pull-left" aria-hidden="true"></i>
+                            <h4 class="questionItem__title">А есть более продвинутый курс</h4>
+                            <p class="questionItem__text sm_text">Да, есть курс по современному javascript фреймворку Vue.js</p>
+                        </article>
+                        <article class="questionItem">
+                            <i class="fa fa-question-circle fa-pull-left" aria-hidden="true"></i>
+                            <h4 class="questionItem__title">А если я боюсь изучать js</h4>
+                            <p class="questionItem__text sm_text">Все боятся того, чего не знают. Это нормально. Пока не попробуете &ndash; не изучите, это гарантировано :)</p>
+                        </article>
+                        <article class="questionItem">
+                            <i class="fa fa-question-circle fa-pull-left" aria-hidden="true"></i>
+                            <h4 class="questionItem__title">Будут ли ещё потоки этого курса</h4>
+                            <p class="questionItem__text sm_text">Будут, но точных дат нет &mdash; посмотрим на желание аудитории.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!--footer section begin-->
+        <footer>
+            <div class="wrapper">
+                <h2>Всё ещё боишься javascript!? А они уже нет!</h2>
+                <div id="vk_comments_browse">
+					
+				</div>
+                <article class="bigArticle">
+                    <h2>Приятного изучения javascript!</h2>
+                    <div class="bigArticle__text big_text">
+                        <p>На этом курсе или не на нём, вам всё равно придётся освоить javascript. Потому что это язык развивающийся и популярный, постепенно захватывающий всё новые просторы.
+                        </p>
+                        <p>Успехов!</p>
+                    </div>
+                </article>
+
+                <div class="linkButtons">
+                    <a href="#">
+                        <div class="linkButtons__GooglePlay" data-scroll-target=".packagesSection">
+                            <div class="linkButtons__Img">
+                                <span class="fa fa-fw fa-2x fa-check">&nbsp;</span>
+                            </div>
+                            <div class="linkButtons__Text">
+                                <span class="smalltext">Хочу</span>
+                                <span class="bigtext">участвовать</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="copyright sm_text">
+					<span>ИП Лаврик Дмитрий Витальевич, &copy; 2019.</span> 
+					<a href="../https@dmitrylavrik.ru/confidential.pdf" target="_blank">Политика конфиденциальности.</a>
+				</div>
+            </div>
+        </footer>
+        <!-- Yandex.Metrika counter --> <!--ipt type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter43248954 = new Ya.Metrika({ id:43248954, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </scri--> <noscript><div><img src="../https@mc.yandex.ru/watch/43248954" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = '../https@vk.com/rtrg@p=VK-RTRG-103518-3K4zH';</script>
+        <script type="text/javascript" src="../vk.com/js/api/openapi.js@136"></script>
+        <script type="text/javascript">
+            window.onload = function () {
+             VK.init({apiId: 5981521, onlyWidgets: true});
+             VK.Widgets.CommentsBrowse('vk_comments_browse', {limit: 30, mini: 0});
+            }
+        </script>
+    </body>
+</html>

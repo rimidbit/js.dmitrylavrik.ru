@@ -1,0 +1,135 @@
+$(document).ready(function () {
+
+    $('*[data-scroll-target]').on('click', function (e) {
+        e.preventDefault();
+
+        var target = $(this).data('scroll-target');
+        var offset = $(this).data('scroll-offset') || 0;
+        var rate = $(this).data('scroll-rate') || 300;
+        var go = $(target);
+
+        if (go.length > 0) {
+            var top = go.offset().top + offset;
+            $('html,body').animate({scrollTop: top}, rate);
+        }
+    });
+
+
+    var elems = {
+        'd': $('.timer .timer-d span').eq(0),
+        'd_s': $('.timer .timer-d span').eq(1),
+        'h': $('.timer .timer-h span').eq(0),
+        'h_s': $('.timer .timer-h span').eq(1),
+        'm': $('.timer .timer-m span').eq(0),
+        'm_s': $('.timer .timer-m span').eq(1),
+        's': $('.timer .timer-s span').eq(0),
+        's_s': $('.timer .timer-s span').eq(1),
+    };
+
+    var t = new Timer(parseInt($('.timer').data('time')), function (data) {
+        for (k in elems) {
+            elems[k].html(data[k]);
+        }
+    });
+
+    t.start();
+    t.render();
+
+    $('.timer').addClass('timer-showed');
+    
+    $('.btn').click(function () {
+        var $btn = $(this).prop('disabled', true).addClass('load');
+        var $form = $btn.parents('form').eq(0);
+
+        var err = 0;
+        var pattern = new RegExp(/^([A-Za-zА-Яа-яЁё\s]{0,50}$)/);
+        var name = $form.find('input[name=name]');
+
+        if (name.val().length < 2 || !pattern.test(name.val())) {
+            err++;
+            name.addClass('err');
+        } else {
+            name.removeClass('err');
+        }
+
+        pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+        var email = $form.find('input[name=email]');
+
+        if (!pattern.test(email.val())) {
+            err++;
+            email.addClass('err');
+        } else {
+            email.removeClass('err');
+        }
+
+        pattern = new RegExp(/^([0-9\s\+\-\(\)]{7,20}$)/);
+        var phone = $form.find('input[name=phone]');
+
+        if (!pattern.test(phone.val())) {
+            err++;
+            phone.addClass('err');
+        } else {
+            phone.removeClass('err');
+        }
+      
+        if (err > 0) {
+            $btn.prop('disabled', false).removeClass('load');
+            return false;
+        }
+
+        $.post('send.php', $form.serialize(), function (data) {
+            $btn.prop('disabled', false).removeClass('load');
+
+            if (data.res === true) {
+                /* yaCounter43248954.reachGoal('app'); */
+                var r = $form.parent().css({display: 'flex'});
+                $form.remove();
+                r.append(data.data).fadeIn(500);
+            } else {
+                alert(data.errors.join('\r\n'));
+            }
+        }, 'json');
+    });
+    
+    function check_sale(){
+        var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+        var email = $('input[name=email]').val();
+
+        if (pattern.test(email)){
+            $.post('check.php', {email: email}, function(data){
+                if(data.res === true){
+                    var html = '<s data-sale="-' + data.sale + '%" title="Персональная скидка">6 900</s>' + data.price;
+
+                    if($('.prices .megasale').length > 0){
+                        $('.prices .megasale').html(html);
+                    }
+                    else{
+                        var $new = $('<span/>').addClass('megasale')
+                                               .html(html);
+                        $('.prices span[data-text]').fadeOut(200, function(){
+                            $('.prices').append($new);
+                        });
+                    }
+                }
+                else{
+                    clear_sale();
+                }
+            }, 'json');
+        }
+        else{
+            clear_sale();
+        }
+    }
+
+    function clear_sale(){
+        if($('.prices .megasale').length > 0){
+            $('.prices .megasale').remove();
+            $('.prices span[data-text]').show();
+        }
+    }
+    
+    $('input[name=email]').on('blur', check_sale);
+
+    check_sale();
+});
+
